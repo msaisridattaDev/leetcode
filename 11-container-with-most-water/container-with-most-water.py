@@ -18,6 +18,6 @@ class Solution:
             elif x>y:
                 p2-=1
             
-            print(p1,p2,s)
+            #print(p1,p2,s)
         return s
         
