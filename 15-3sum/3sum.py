@@ -17,17 +17,13 @@ class Solution:
 
                 if s==c:
                     h=[d[p1],d[p2],-(c)]
-                    if h in m:
-                        pass
-                    else:   
+                    if h not in m:
                         m+=[h]
                     p2-=1
                     p1+=1
 
                 else:
-                    #print(d[p1],c-d[p1],d[p2],-c)
                     if d[p2]>= c-d[p1] >= d[p1]:
-                        #print("yes entered ",d[p1],c-d[p1],d[p2])
                         p2-=1
                     else:
                         p1+=1
