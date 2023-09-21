@@ -17,15 +17,13 @@ class Solution:
                 prev=prev.next
                 prev.next=None
                 head=head.next
-                #print(head,"\n\n prev is",prev,"\n\n nxt is",nxt)
+
             else:
                 nxt.next=copy.deepcopy(head)
                 nxt=nxt.next
                 nxt.next=None
                 head=head.next
-                #print(head,"\n\n prev is",prev,"\n\n nxt is",nxt)
-            
-           # print(head,"\n\n prev is",prev,"\n\n nxt is",nxt)
+
 
         prev.next=t2.next
 
