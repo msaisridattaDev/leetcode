@@ -29,7 +29,7 @@ class Solution:
         
         d=str(s1+s2)
         d=d[::-1]
-        print(d)
+
 
         for i in range(len(d)):
             g=ListNode(d[i],None)
