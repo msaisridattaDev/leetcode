@@ -26,14 +26,10 @@ class Solution:
             if (len(q)==0):
                 m+=[t]
                 q=copy.deepcopy(c)
-                #print(q)
                 c=[]
                 t=[]
 
-        for i in range(len(m)):
-            c+=[m.pop()]
-
-        return c
+        return m[len(m)-1::-1]
 
                 
             
