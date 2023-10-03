@@ -2,15 +2,15 @@ class Solution:
     def partitionString(self, s: str) -> int:
         
         p=""
-        o=[]
+        c=0
         for i in s:
             if i not in p:
                 p+=i
             else:
-                o+=[p]
+                c+=1
                 p=""
                 p+=i
                 
-        o+=[p]
+        c+=1
 
-        return len(o)
+        return c
