@@ -17,21 +17,11 @@ class Solution:
 
             if ( root.val in s):
 
-                if (self.isValidBST2(root.right,[root.val+1,l[1]]) and self.isValidBST2(root.left,[l[0],root.val])):
-                    print("valid for ",root.val,"\n",l)
-                    return True
-                else:
-                    print("invalid for ",root.val,"\n",l)
-                    return False
+                return (self.isValidBST2(root.right,[root.val+1,l[1]]) and self.isValidBST2(root.left,[l[0],root.val]))
+   
             else:
-                print("invalid for ",root.val,"\n outer if",l)
                 return False
             
-
-
-
-
-
 
         def isValidBST(self, root: Optional[TreeNode]) -> bool:
 
