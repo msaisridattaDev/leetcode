@@ -38,11 +38,6 @@ class Solution:
 
         def isValidBST(self, root: Optional[TreeNode]) -> bool:
 
-            if not root:
-                return True
+                return (self.isValidBST2(root,[-sys.maxsize,sys.maxsize]))
 
-            if (root.right==None or root.right.val > root.val) and (root.left==None or root.val > root.left.val):
-                return (self.isValidBST2(root.right,[root.val+1,sys.maxsize]) and self.isValidBST2(root.left,[-sys.maxsize,root.val]))
-            else:
-                return False
         
