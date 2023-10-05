@@ -15,10 +15,7 @@ class Solution:
 
             s= range(l[0],l[1])
 
-            if (root.right==None or (root.right.val > root.val and root.right.val in s)) and (root.left==None or (root.val > root.left.val and root.left.val in s )):
-
-      
-
+            if ( root.val in s):
 
                 if (self.isValidBST2(root.right,[root.val+1,l[1]]) and self.isValidBST2(root.left,[l[0],root.val])):
                     print("valid for ",root.val,"\n",l)
