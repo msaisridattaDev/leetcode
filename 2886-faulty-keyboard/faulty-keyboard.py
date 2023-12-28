@@ -4,7 +4,7 @@ class Solution:
         p=""
         for i in s:
             if i=="i":
-                p=p[-1:-(len(p)+1):-1]
+                p=p[::-1]
             else:
                 p+=i
 
