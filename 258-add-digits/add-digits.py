@@ -2,7 +2,6 @@ class Solution:
     def addDigits(self, num: int) -> int:
         def addDigits(num):
             
-            print(num)
             if int(num/10)==0:
                 return num
 
