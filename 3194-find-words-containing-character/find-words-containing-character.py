@@ -6,6 +6,6 @@ class Solution:
         for i in range(len(words)):
 
             if x in words[i]:
-                t+=[i]
+                t.append(i)
 
         return t
