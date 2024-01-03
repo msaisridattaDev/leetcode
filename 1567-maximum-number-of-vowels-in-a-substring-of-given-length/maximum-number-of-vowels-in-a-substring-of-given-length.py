@@ -4,7 +4,7 @@ class Solution:
         p=""
         m=0
         c=0
-        v=['a','e','i','o','u']
+        v="aeiou"
         for j in range(len(s)):
 
            # print(p,)
