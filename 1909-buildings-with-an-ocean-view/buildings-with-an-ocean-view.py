@@ -2,7 +2,7 @@ class Solution:
     def findBuildings(self, heights: List[int]) -> List[int]:
         nums=heights
         d=len(nums)-1
-        print(nums)
+        
         t=[d]
         l=[nums[-1]]
 
