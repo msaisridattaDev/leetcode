@@ -1,9 +1,7 @@
 class Solution:
     def canJump(self, nums: List[int]) -> bool:
-        global v
+        
         v=[False]*len(nums)
-        global d
-
         d=[None]*len(nums)
         def jumpGame(nums,i,d,v):
 
@@ -19,12 +17,11 @@ class Solution:
             for j in range(nums[i],0,-1):
 
                 if i+j<= len(nums)-1:
-                    #print(i+j)
                     if v[i+j]==False:
                         if d[i+j]==None:
                             if jumpGame(nums,i+j,d,v):
                                 d[i]=True
-                                #print(d)
+                        
                                 return True       
                 
 
