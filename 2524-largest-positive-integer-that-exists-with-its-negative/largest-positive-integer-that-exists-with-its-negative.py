@@ -18,9 +18,6 @@ class Solution:
                 if nums[p1]<0 and nums[p2]<0:
                     break 
 
-                elif nums[p1]>0 and nums[p2]>0:
-                    break
-
                 if -(nums[p1])> nums[p2]:
                     p1+=1
 
