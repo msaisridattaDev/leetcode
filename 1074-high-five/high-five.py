@@ -11,7 +11,9 @@ class Solution:
                 c[i[0]]=[i[1]]
 
         r=[]
-        for j in c.keys():
+        d=list(c.keys())
+        d.sort()
+        for j in d:
 
             heapq.heapify(c[j])
 
@@ -22,7 +24,7 @@ class Solution:
 
             r.append([j,p])
 
-        r.sort()
+        
         return r
 
     
