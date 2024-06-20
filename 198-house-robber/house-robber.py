@@ -4,17 +4,14 @@ class Solution:
 
         d[0]=nums[0]
 
-        if len(nums)>1:
-            d[1]=nums[1]
         
-        if len(nums)==2:
-            d[1]=max(d[0],d[1])
+        
+        if len(nums)>1:
+            d[1]=max(nums[0],nums[1])
 
         for i in range(2,len(nums)):
 
-            d[i]=max(d[i-1]-nums[i-1]+nums[i],d[i-2]+nums[i])
+            d[i]=max(d[i-1],d[i-2]+nums[i])
 
-        print(d)
-
-        return max(d)
+        return d[-1]
         
