@@ -2,7 +2,7 @@ class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
         d={}
 
-        coins.sort()
+    
         def count(coins, n, sum,dist):
 
             # If sum is 0 then there is 1
