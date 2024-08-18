@@ -8,6 +8,7 @@ class Solution:
                 if count[s[left]] == 0:
                     del count[s[left]]
                 left += 1
+            print(left,right)
         return len(s) - left
 
 
