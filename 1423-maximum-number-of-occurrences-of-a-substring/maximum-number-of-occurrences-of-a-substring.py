@@ -3,7 +3,8 @@ class Solution:
         
         m=maxLetters
         k=minSize
-        count = collections.Counter(s[i:i + k] for i in range(len(s) - k + 1))
+        n=len(s)
+        count= Counter([s[i:i+k]  for i in range(n-k+1)])
         ans=0
         
         for i,v in count.items():
