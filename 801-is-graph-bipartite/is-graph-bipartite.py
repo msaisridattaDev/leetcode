@@ -1,27 +1,18 @@
-from typing import List
-from collections import deque
-
 class Solution:
-    def isBipartite(self, gr: List[List[int]]) -> bool:
-        n = len(gr)
-        colour = [0] * n
-
-        for node in range(n):
-            if colour[node] != 0:
-                continue
-
-            q = deque()
-            q.append(node)
-            colour[node] = 1
-
-            while q:
-                cur = q.popleft()
-
-                for ne in gr[cur]:
-                    if colour[ne] == 0:
-                        colour[ne] = -colour[cur]
-                        q.append(ne)
-                    elif colour[ne] != -colour[cur]:
-                        return False
-
+    def isBipartite(self, graph: List[List[int]]) -> bool:
+        queue = deque()
+        color = [-1]*len(graph)
+        for i in range(len(graph)):
+            if color[i] == -1:
+                queue.append((i,0))
+                color[i] = 0
+                while queue:
+                    u,c = queue.popleft()
+                    for v in graph[u]:
+                        if color[v] == -1:
+                            color[v] = 1-c
+                            queue.append((v,1-c))
+                        else:
+                            if color[v] == c:
+                                return False
         return True
