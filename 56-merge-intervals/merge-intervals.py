@@ -4,7 +4,7 @@ class Solution:
             return []
         
         # Step 1: Sort intervals based on the start time
-        intervals.sort(key=lambda x: x[0])
+        intervals.sort()
         
         merged = [intervals[0]]  # Start with the first interval
         
