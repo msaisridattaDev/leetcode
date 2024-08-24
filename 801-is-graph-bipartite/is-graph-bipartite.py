@@ -1,3 +1,6 @@
+
+
+###############3#########
 class Solution:
     def isBipartite(self, graph: List[List[int]]) -> bool:
         queue = deque()
@@ -8,11 +11,13 @@ class Solution:
                 color[i] = 0
                 while queue:
                     u,c = queue.popleft()
+                    print(u,c)
                     for v in graph[u]:
                         if color[v] == -1:
                             color[v] = 1-c
                             queue.append((v,1-c))
                         else:
                             if color[v] == c:
+
                                 return False
         return True
