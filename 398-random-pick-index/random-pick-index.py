@@ -13,13 +13,13 @@ class Solution:
 
     def pick(self, target: int) -> int:
 
-        if target in self.c.keys() and target not in self.t.keys():
+        if target in self.c and target not in self.t:
             p=self.c[target]
             random.shuffle(p)
             self.c[target]=p
             self.t[target]=0
             return p[0]
-        elif target in self.c.keys() and target  in self.t.keys():
+        elif target in self.c and target  in self.t:
             p=self.c[target]
             j=self.t[target]
             self.t[target]= (self.t[target]+1)% len(self.c[target])
